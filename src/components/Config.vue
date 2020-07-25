@@ -1,8 +1,33 @@
+<i18n>
+{
+  "en": {
+    "config": "Config",
+    "server url": "Server url",
+    "display": "Display",
+    "config":"Config",
+    "setting":"Setting",
+    "kitchen":"Kitchen",
+    "service":"Service",
+    "save":"Save"
+  },
+  "fr": {
+    "config" : "Configuration",
+    "server url": "Url du serveur",
+    "display": "Affichage",
+    "config": "Configuration",
+    "setting": "Parametrage",
+    "kitchen": "Cuisine",
+    "service": "Service",
+    "save": "Enregistrer"
+  }
+}
+</i18n>
+
 <template>
   <div class="config">
-    <h1>Configuration</h1>
+    <h1>{{ $t('config' )}}</h1>
     <b-form-group
-      label="Url du serveur"
+      :label="$t('server url')"
       label-for="server-url">
       <b-form-input
         id="server-url"
@@ -12,18 +37,18 @@
         @input="suInput" />
     </b-form-group>
     <b-form-group
-      label="Affichage"
+      :label="$t('Affichage')"
       label-for="display-mode">
       <b-form-select
         id="display-mode"
         v-model="displayMode">
-        <b-form-select-option value="Config">Configuration</b-form-select-option>
-        <b-form-select-option value="Setting">Parametrage</b-form-select-option>
-        <b-form-select-option value="Kitchen">Cuisine</b-form-select-option>
-        <b-form-select-option value="Service">Service</b-form-select-option>
+        <b-form-select-option value="Config">{{ $t('config') }}</b-form-select-option>
+        <b-form-select-option value="Setting">{{ $t('setting') }}</b-form-select-option>
+        <b-form-select-option value="Kitchen">{{ $t('kitchen') }}</b-form-select-option>
+        <b-form-select-option value="Service">{{ $t('service') }}</b-form-select-option>
       </b-form-select>
     </b-form-group>
-    <button @click="save">Enregistrer</button>
+    <button @click="save">{{ $t('save') }}</button>
   </div>
 </template>
 
