@@ -18,9 +18,9 @@
     <!-- <h2>{{ $t('dishes') }}</h2> -->
 
     <dish-editor v-if="dish" :dish="dish" @input="change" />
-    <button v-if="id && !children().length" @click="remove">Delete</button>
+    <b-button class="btn-remove" variant="danger" v-if="id && !children().length" @click="remove">Delete</b-button>
     <!-- <button v-if="this.id" @click="remove">Delete</button> -->
-    <button @click="add">Add</button>
+    <b-button variant="primary" @click="add">Add</b-button>
     <br/>
     <br/>
     <div class="children">
@@ -83,5 +83,8 @@ export default {
   border-left: 1px solid #000;
   padding-left: 15px;
   /* padding: 10px; */
+}
+.btn-remove {
+  margin-right: 5px;
 }
 </style>

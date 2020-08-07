@@ -23,10 +23,46 @@
 
 <template>
   <div class="dish">
-    {{ $t('shortName') }} <input v-model="value.shortname" @input="emit" /><br/>
-    {{ $t('name') }} <input v-model="value.name" @input="emit" /><br/>
-    {{ $t('desc.') }} <input v-model="value.description" @input="emit" /><br/>
-    {{ $t('price') }} <input v-model="value.price" @input="emit" /><br/>
+    <b-form-group
+      label-cols="2"
+      :label="$t('shortName')"
+      label-for="shortName">
+      <b-form-input
+        id="shortName"
+        v-model="value.shortname"
+        type="text"
+        @input="emit" />
+    </b-form-group>
+    <b-form-group
+      label-cols="2"
+      :label="$t('name')"
+      label-for="name">
+      <b-form-input
+        id="name"
+        v-model="value.name"
+        type="text"
+        @input="emit" />
+    </b-form-group>
+    <b-form-group
+      label-cols="2"
+      :label="$t('desc.')"
+      label-for="desc.">
+      <b-form-input
+        id="desc."
+        v-model="value.description"
+        type="text"
+        @input="emit" />
+    </b-form-group>
+    <b-form-group
+      label-cols="2"
+      :label="$t('price')"
+      label-for="price">
+      <b-form-input
+        id="price"
+        v-model="value.price"
+        type="text"
+        @input="emit" />
+    </b-form-group>
   </div>
 </template>
 
