@@ -51,7 +51,7 @@ export default {
       } else {
         this.countClick = 0
       }
-      console.log('onClick:', this.countClick)
+      // console.log('onClick:', this.countClick)
       if (this.countClick >= 10) {
         this.countClick = 0
         this.$store.commit('setDisplayMode', 'Config')
